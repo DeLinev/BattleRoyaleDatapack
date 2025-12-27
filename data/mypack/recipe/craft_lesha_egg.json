@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": ["minecraft:rotten_flesh", "minecraft:book"],
+  "result": {
+    "id": "minecraft:zombie_spawn_egg",
+    "components": {
+      "minecraft:item_name": {"text":"Lesha Spawner","color":"green","italic":false},
+      "minecraft:entity_data": {
+        "id": "minecraft:zombie",
+        "Tags": [
+          "lesha"
+        ],
+        "DeathLootTable": "mypack:goofy_drop",
+        "CustomName": "Lesha"
+      }
+    }
+  }
+}
