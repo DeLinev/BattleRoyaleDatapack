@@ -10,7 +10,7 @@
         "Tags": [
           "lesha"
         ],
-        "DeathLootTable": "mypack:goofy_drop",
+        "DeathLootTable": "battle_royale:goofy_drop",
         "CustomName": "Lesha"
       }
     }

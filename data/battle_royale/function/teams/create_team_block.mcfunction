@@ -8,7 +8,7 @@ $setblock ~1 ~ ~$(offset) $(sign)[facing=east]{front_text:{messages:[\
     "text":"[JOIN $(team_name)]",\
     "click_event":{\
       "action":"run_command",\
-      "command":"execute as @s run function mypack:teams/join_team {team:\"$(team)\",team_name:\"$(team_name)\",color:\"$(color)\"}"\
+      "command":"execute as @s run function battle_royal:teams/join_team {team:\"$(team)\",team_name:\"$(team_name)\",color:\"$(color)\"}"\
     },\
     "bold":true,\
     "color":"$(color)"\
