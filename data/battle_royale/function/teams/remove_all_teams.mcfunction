@@ -1,4 +1,4 @@
-team remove TeamBlue
-team remove TeamGreen
-team remove TeamYellow
-team remove TeamRed
+team remove br.blue
+team remove br.green
+team remove br.yellow
+team remove br.red

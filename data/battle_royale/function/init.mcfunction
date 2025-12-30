@@ -13,7 +13,7 @@ scoreboard players set #ending_init br.temp 0
 
 scoreboard players reset * br.kills
 scoreboard players reset * br.deaths
-scoreboard players reset * br.team
+# scoreboard players reset * br.team
 scoreboard players reset * br.player_state
 
 team leave @a

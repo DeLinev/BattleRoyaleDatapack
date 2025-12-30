@@ -3,6 +3,7 @@ tellraw @a [{"text":"[","color":"gray"},{"text":"Battle Royale","color":"gold","
 # Scoreboards - Core System
 # br.gamestate: 0=Lobby, 1=Starting, 2=Active, 3=Ending
 scoreboard objectives add br.gamestate dummy "Game State"
+scoreboard objectives add br.teams dummy "Teams Count"
 scoreboard objectives add br.timer dummy "Timer"
 scoreboard objectives add br.tick dummy "Tick Counter"
 scoreboard objectives add br.config dummy "Config"
@@ -12,7 +13,7 @@ scoreboard objectives add br.const dummy "Constants"
 # Player Stats
 scoreboard objectives add br.kills playerKillCount "Kills"
 scoreboard objectives add br.deaths deathCount "Deaths"
-scoreboard objectives add br.team dummy "Team ID"
+# scoreboard objectives add br.team dummy "Team ID"
 # br.player_state: 0=alive, 1=dead/spectating, 2=disconnected
 scoreboard objectives add br.player_state dummy "Player State"
 scoreboard objectives add br.display dummy {"text":"⚔ Battle Royale ⚔","color":"gold","bold":true}
@@ -30,17 +31,19 @@ scoreboard players set #shrink_time br.config 300
 scoreboard players set #countdown_time br.config 10
 scoreboard players set #ending_time br.config 20
 scoreboard players set #min_players br.config 2
+summon marker -3 201 -2 {Tags:["br.achor_block"]}
 
 # Teams
-team add br.red "Red Team"
-team modify br.red color red
-team modify br.red friendlyFire false
-team modify br.red seeFriendlyInvisibles true
+function battle_royale:teams/remove_all_teams
+# team add br.red "Red Team"
+# team modify br.red color red
+# team modify br.red friendlyFire false
+# team modify br.red seeFriendlyInvisibles true
 
-team add br.blue "Blue Team"
-team modify br.blue color blue
-team modify br.blue friendlyFire false
-team modify br.blue seeFriendlyInvisibles true
+# team add br.blue "Blue Team"
+# team modify br.blue color blue
+# team modify br.blue friendlyFire false
+# team modify br.blue seeFriendlyInvisibles true
 
 team add br.green "Green Team"
 team modify br.green color green
@@ -55,6 +58,8 @@ team modify br.yellow seeFriendlyInvisibles true
 team add br.spectators "Spectators"
 team modify br.spectators color gray
 team modify br.spectators collisionRule never
+
+scoreboard players set #teams_count br.teams 2
 
 # Bossbar
 bossbar add br:border {"text":"Border Shrinking","color":"red"}
