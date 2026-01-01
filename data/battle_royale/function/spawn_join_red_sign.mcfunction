@@ -1,1 +1,0 @@
-setblock ~-1 ~ ~ pale_oak_wall_sign[facing=east]{front_text:{messages:[{"text":""},{"text":"[JOIN RED]","click_event":{"action": "run_command", "command":"execute as @s run function mypack:teams/join_red"},"bold":true,"color":"dark_red"},{"text":""},{"text":""}]}}

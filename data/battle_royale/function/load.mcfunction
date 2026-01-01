@@ -59,8 +59,6 @@ team add br.spectators "Spectators"
 team modify br.spectators color gray
 team modify br.spectators collisionRule never
 
-scoreboard players set #teams_count br.teams 2
-
 # Bossbar
 bossbar add br:border {"text":"Border Shrinking","color":"red"}
 bossbar set br:border color red

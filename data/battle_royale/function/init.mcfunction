@@ -1,10 +1,16 @@
 # Reset game to LOBBY state
 scoreboard players set #state br.gamestate 0
 
+# Load lobby structure
+forceload add -4 -6 8 6
+place template battle_royale:lobby_base -4 200 -6
+kill @e[type=item]
+
 scoreboard players set #ticks br.tick 0
 scoreboard players set #countdown br.timer 0
 scoreboard players set #border_timer br.timer 0
 scoreboard players set #ending_timer br.timer 0
+scoreboard players set #teams_count br.teams 2
 
 scoreboard players set #temp br.temp 0
 scoreboard players set #alive_teams br.temp 0
