@@ -11,6 +11,7 @@ execute if score #temp br.temp < #min_players br.config run return fail
 scoreboard players set #state br.gamestate 1
 execute store result score #countdown br.timer run scoreboard players get #countdown_time br.config
 tag @a[tag=br.has_team] add br.alive
+gamemode spectator @a[tag=!br.has_team]
 
 tellraw @a [{"text":"[","color":"gray"},{"text":"Battle Royale","color":"gold","bold":true},{"text":"] ","color":"gray"},{"text":"Game starting! Get ready...","color":"green"}]
 

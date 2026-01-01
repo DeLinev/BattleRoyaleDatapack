@@ -17,6 +17,8 @@ scoreboard players reset * br.deaths
 scoreboard players reset * br.player_state
 
 team leave @a
+clear @a[tag=!br.admin]
+gamemode creative @a[tag=br.admin]
 
 scoreboard players set #team_red br.temp 0
 scoreboard players set #team_blue br.temp 0
