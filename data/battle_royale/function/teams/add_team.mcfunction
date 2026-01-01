@@ -9,7 +9,7 @@ execute if score #teams_count br.teams matches 3 run team add br.blue "Blue Team
 execute if score #teams_count br.teams matches 3 run team modify br.blue color blue
 execute if score #teams_count br.teams matches 3 run team modify br.blue friendlyFire false
 execute if score #teams_count br.teams matches 3 run team modify br.blue seeFriendlyInvisibles true
-execute if score #teams_count br.teams matches 3 as @e[type=marker,tag=br.achor_block,limit=1] at @s run function battle_royale:teams/create_team_block { \
+execute if score #teams_count br.teams matches 3 as @e[type=marker,tag=br.anchor_block,limit=1] at @s run function battle_royale:teams/create_team_block { \
   offset:3, \
   wool:"minecraft:blue_wool", \
   sign:"minecraft:oak_wall_sign", \
@@ -22,7 +22,7 @@ execute if score #teams_count br.teams matches 4 run team add br.red "Red Team"
 execute if score #teams_count br.teams matches 4 run team modify br.red color red
 execute if score #teams_count br.teams matches 4 run team modify br.red friendlyFire false
 execute if score #teams_count br.teams matches 4 run team modify br.red seeFriendlyInvisibles true
-execute if score #teams_count br.teams matches 4 as @e[type=marker,tag=br.achor_block,limit=1] at @s run function battle_royale:teams/create_team_block { \
+execute if score #teams_count br.teams matches 4 as @e[type=marker,tag=br.anchor_block,limit=1] at @s run function battle_royale:teams/create_team_block { \
   offset:4, \
   wool:"minecraft:red_wool", \
   sign:"minecraft:oak_wall_sign", \

@@ -31,7 +31,7 @@ scoreboard players set #shrink_time br.config 300
 scoreboard players set #countdown_time br.config 10
 scoreboard players set #ending_time br.config 20
 scoreboard players set #min_players br.config 2
-summon marker -3 201 -2 {Tags:["br.achor_block"]}
+summon marker -3 201 -2 {Tags:["br.anchor_block"]}
 
 # Teams
 function battle_royale:teams/remove_all_teams
