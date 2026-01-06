@@ -1,7 +1,7 @@
 scoreboard players set #ending_init br.temp 1
 
 # Tag winners
-tag @a[tag=br.alive] add br.winner
+tag @a[scores={br.player_state=0}] add br.winner
 
 # Announce winner by team
 execute if entity @a[tag=br.winner,team=br.red] run tellraw @a [{"text":"\n"},{"text":"══════════════════════════════","color":"gold"},{"text":"\n"},{"text":"      🏆 ","color":"yellow"},{"text":"RED TEAM WINS!","color":"red","bold":true},{"text":" 🏆","color":"yellow"},{"text":"\n"},{"text":"══════════════════════════════","color":"gold"},{"text":"\n"}]

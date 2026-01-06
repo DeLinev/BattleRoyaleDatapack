@@ -9,11 +9,12 @@ scoreboard objectives add br.tick dummy "Tick Counter"
 scoreboard objectives add br.config dummy "Config"
 scoreboard objectives add br.temp dummy "Temp"
 scoreboard objectives add br.const dummy "Constants"
+scoreboard objectives add br.players_count dummy "Players"
 
 # Player Stats
 scoreboard objectives add br.kills playerKillCount "Kills"
 scoreboard objectives add br.deaths deathCount "Deaths"
-# scoreboard objectives add br.team dummy "Team ID"
+scoreboard objectives add br.team dummy "Team ID"
 # br.player_state: 0=alive, 1=dead/spectating, 2=disconnected
 scoreboard objectives add br.player_state dummy "Player State"
 scoreboard objectives add br.display dummy {"text":"⚔ Battle Royale ⚔","color":"gold","bold":true}
