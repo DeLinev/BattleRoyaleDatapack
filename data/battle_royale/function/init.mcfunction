@@ -25,6 +25,7 @@ scoreboard players reset * br.player_state
 
 team leave @a
 clear @a[tag=!br.admin]
+spawnpoint @a 0 200 0
 effect give @a regeneration 1 255 true
 effect give @a saturation 1 255 true
 gamemode creative @a[tag=br.admin]

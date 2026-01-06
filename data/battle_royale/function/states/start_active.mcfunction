@@ -23,10 +23,9 @@ execute store result score #border_timer br.timer run scoreboard players get #sh
 
 scoreboard objectives setdisplay list br.kills
 
-scoreboard players set Alive br.alive_count 0
-scoreboard players set Dead br.alive_count 0
-execute as @a[scores={br.player_state=0}] run scoreboard players add Alive br.alive_count 1
-execute as @a[scores={br.player_state=1}] run scoreboard players add Dead br.alive_count 1
-scoreboard objectives setdisplay sidebar br.alive_count
-
+scoreboard players set Alive br.players_count 0
+scoreboard players set Dead br.players_count 0
+execute as @a[scores={br.player_state=0}] run scoreboard players add Alive br.players_count 1
+execute as @a[scores={br.player_state=1}] run scoreboard players add Dead br.players_count 1
+scoreboard objectives setdisplay sidebar br.players_count
 tellraw @a [{"text":"[","color":"gray"},{"text":"Battle Royale","color":"gold","bold":true},{"text":"] ","color":"gray"},{"text":"The game has begun! Last team standing wins!","color":"green"}]

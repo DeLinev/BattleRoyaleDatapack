@@ -11,6 +11,8 @@ scoreboard objectives add br.temp dummy "Temp"
 scoreboard objectives add br.const dummy "Constants"
 scoreboard objectives add br.players_count dummy "Players"
 
+gamerule locator_bar false
+
 # Player Stats
 scoreboard objectives add br.kills playerKillCount "Kills"
 scoreboard objectives add br.deaths deathCount "Deaths"
