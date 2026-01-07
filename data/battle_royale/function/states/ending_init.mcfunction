@@ -17,7 +17,9 @@ title @a[tag=!br.winner] subtitle {"text":"Better luck next time!","color":"dark
 playsound minecraft:ui.toast.challenge_complete master @a ~ ~ ~ 1 1
 playsound minecraft:entity.player.levelup master @a[tag=br.winner] ~ ~ ~ 1 0.8
 
-# execute as @a[tag=br.winner] at @s run summon firework_rocket ~ ~ ~ {LifeTime:20,FireworksItem:{id:"minecraft:firework_rocket",count:1,components:{"minecraft:fireworks":{explosions:[{shape:"large_ball",colors:[I;16711680,16776960,65280],has_trail:1b}],flight_duration:1b}}}}
+execute as @a[tag=br.winner] at @s run summon firework_rocket ~ ~ ~ {LifeTime:20,FireworksItem:{id:"minecraft:firework_rocket",count:5,components:{"minecraft:fireworks":{explosions:[{shape:"large_ball",colors:[16711680, 255, 65335],has_trail:true}],flight_duration:1b}}}}
+execute as @a[tag=br.winner] at @s run summon firework_rocket ~ ~ ~ {LifeTime:30,FireworksItem:{id:"minecraft:firework_rocket",count:5,components:{"minecraft:fireworks":{explosions:[{shape:"large_ball",colors:[16711680, 255, 65335],has_trail:true}],flight_duration:1b}}}}
+execute as @a[tag=br.winner] at @s run summon firework_rocket ~ ~ ~ {LifeTime:35,FireworksItem:{id:"minecraft:firework_rocket",count:5,components:{"minecraft:fireworks":{explosions:[{shape:"large_ball",colors:[16711680, 255, 65335],has_trail:true}],flight_duration:1b}}}}
 
 execute store result score #ending_timer br.timer run scoreboard players get #ending_time br.config
 
