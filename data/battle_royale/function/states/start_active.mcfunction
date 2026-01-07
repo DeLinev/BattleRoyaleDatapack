@@ -1,6 +1,8 @@
 # Transition to Active state
 scoreboard players set #state br.gamestate 2
 
+time set day
+
 title @a title {"text":"FIGHT!","color":"red","bold":true}
 title @a subtitle {"text":"May the best team win!","color":"gray"}
 
