@@ -1,4 +1,5 @@
 scoreboard players remove #countdown br.timer 1
+effect give @a resistance 1 255 true
 
 # Countdown titles
 execute if score #countdown br.timer matches 10 run title @a title {"text":"10","color":"red","bold":true}

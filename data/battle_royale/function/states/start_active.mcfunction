@@ -23,6 +23,8 @@ bossbar set br:border name {"text":"⚠ Border Shrinking ⚠","color":"red"}
 
 execute store result score #border_timer br.timer run scoreboard players get #shrink_time br.config
 
+scoreboard players reset * br.kills
+scoreboard players reset * br.deaths
 scoreboard objectives setdisplay list br.kills
 
 scoreboard players set Alive br.players_count 0
