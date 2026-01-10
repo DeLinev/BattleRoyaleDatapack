@@ -22,15 +22,18 @@ scoreboard objectives add br.player_state dummy "Player State"
 scoreboard objectives add br.display dummy {"text":"⚔ Battle Royale ⚔","color":"gold","bold":true}
 
 # Constants
+scoreboard players set #2 br.const 2
 scoreboard players set #20 br.const 20
 scoreboard players set #60 br.const 60
 scoreboard players set #100 br.const 100
 scoreboard players set #-1 br.const -1
 
 # Config values
-scoreboard players set #border_initial br.config 5000
+scoreboard players set #border_initial br.config 3000
 scoreboard players set #border_min br.config 50
-scoreboard players set #shrink_time br.config 300
+scoreboard players set #shrink_time br.config 60
+scoreboard players set #wait_time br.config 10
+scoreboard players set #shrink_step br.config 10
 scoreboard players set #countdown_time br.config 10
 scoreboard players set #ending_time br.config 20
 scoreboard players set #min_players br.config 2
@@ -63,8 +66,8 @@ team modify br.spectators color gray
 team modify br.spectators collisionRule never
 
 # Bossbar
-bossbar add br:border {"text":"Border Shrinking","color":"red"}
-bossbar set br:border color red
+bossbar add br:border {"text":"⚠ The area will soon begin to shrink... ⚠", color: "dark_purple"}
+bossbar set br:border color purple
 bossbar set br:border style progress
 bossbar set br:border max 100
 bossbar set br:border value 100

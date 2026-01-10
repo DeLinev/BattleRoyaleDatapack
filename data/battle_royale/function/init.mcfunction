@@ -9,6 +9,7 @@ kill @e[type=item]
 scoreboard players set #ticks br.tick 0
 scoreboard players set #countdown br.timer 0
 scoreboard players set #border_timer br.timer 0
+scoreboard players set #wait_timer br.timer 0
 scoreboard players set #ending_timer br.timer 0
 scoreboard players set #teams_count br.teams 2
 scoreboard players set Alive br.players_count 0
@@ -36,8 +37,8 @@ scoreboard players set #team_green br.temp 0
 scoreboard players set #team_yellow br.temp 0
 
 # Reset world border
-execute in minecraft:overworld run worldborder center 0 0
-execute in minecraft:overworld run worldborder set 5000 0
+execute store result storage br:temp size int 1 run scoreboard players get #border_initial br.config
+function battle_royale:game/set_initial_border with storage br:temp
 
 bossbar set br:border visible false
 bossbar set br:border value 100
