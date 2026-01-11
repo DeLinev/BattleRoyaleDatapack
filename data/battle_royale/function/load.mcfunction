@@ -33,7 +33,7 @@ scoreboard players set #border_initial br.config 3000
 scoreboard players set #border_min br.config 50
 scoreboard players set #shrink_time br.config 60
 scoreboard players set #wait_time br.config 10
-scoreboard players set #shrink_step br.config 10
+scoreboard players set #shrink_step br.config 6
 scoreboard players set #countdown_time br.config 10
 scoreboard players set #ending_time br.config 20
 scoreboard players set #min_players br.config 2

@@ -11,13 +11,18 @@ execute if score #border_curr br.temp <= #border_min br.config run scoreboard pl
 
 # Waiting phase: countdown and show bossbar progress
 execute if score #border_curr br.temp > #border_min br.config if score #wait_timer br.timer matches 1.. run scoreboard players remove #wait_timer br.timer 1
-execute if score #border_curr br.temp > #border_min br.config if score #wait_timer br.timer matches 1.. run function battle_royale:game/update_bossbar
+execute if score #border_curr br.temp > #border_min br.config if score #wait_timer br.timer matches 1.. run execute store result storage br:temp remaining_time int 1 run scoreboard players get #wait_timer br.timer
+execute if score #border_curr br.temp > #border_min br.config if score #wait_timer br.timer matches 1.. run execute store result storage br:temp all_time int 1 run scoreboard players get #wait_time br.config
+execute if score #border_curr br.temp > #border_min br.config if score #wait_timer br.timer matches 1.. run function battle_royale:game/update_bossbar with storage br:temp
 
 # When not waiting and not currently shrinking, start a new shrinking stage
 execute if score #border_curr br.temp > #border_min br.config if score #wait_timer br.timer matches ..0 if score #border_timer br.timer matches ..0 run function battle_royale:game/border_shrink_start
 
 # Shrinking phase: decrement timer and move the world border inwards each second
 execute if score #border_curr br.temp > #border_min br.config if score #border_timer br.timer matches 1.. run scoreboard players remove #border_timer br.timer 1
+execute if score #border_curr br.temp > #border_min br.config if score #border_timer br.timer matches 1.. run execute store result storage br:temp remaining_time int 1 run scoreboard players get #border_timer br.timer
+execute if score #border_curr br.temp > #border_min br.config if score #border_timer br.timer matches 1.. run execute store result storage br:temp all_time int 1 run scoreboard players get #shrink_time br.config
+execute if score #border_curr br.temp > #border_min br.config if score #border_timer br.timer matches 1.. run function battle_royale:game/update_bossbar with storage br:temp
 execute if score #border_curr br.temp > #border_min br.config if score #border_timer br.timer matches 1.. if score #temp br.temp > #shrink_step br.config run execute store result storage br:temp step int 1 run scoreboard players get #shrink_step br.config
 execute if score #border_curr br.temp > #border_min br.config if score #border_timer br.timer matches 1.. if score #temp br.temp > #shrink_step br.config run function battle_royale:game/shrink_border with storage br:temp
 execute if score #border_curr br.temp > #border_min br.config if score #border_timer br.timer matches 1.. unless score #temp br.temp > #shrink_step br.config in minecraft:overworld run worldborder set 50 0
