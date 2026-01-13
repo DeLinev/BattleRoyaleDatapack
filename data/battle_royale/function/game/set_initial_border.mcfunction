@@ -1,7 +1,3 @@
-execute in minecraft:overworld run worldborder center 0 0
-execute in minecraft:the_nether run worldborder center 0 0
-execute in minecraft:the_end run worldborder center 0 0
-
-$execute in minecraft:overworld run worldborder set $(size) 0
-$execute in minecraft:the_nether run worldborder set $(size) 0
-$execute in minecraft:the_end run worldborder set $(size) 0
+# DEPRECATED: This file has been refactored into game/border/init.mcfunction
+# Keeping for backwards compatibility - redirects to new location
+function battle_royale:game/border/init with storage br:temp

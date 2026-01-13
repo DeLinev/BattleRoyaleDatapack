@@ -1,3 +1,3 @@
-$execute in minecraft:overworld run worldborder add -$(step) 2
-$execute in minecraft:the_nether run worldborder add -$(step) 2
-$execute in minecraft:the_end run worldborder add -$(step) 2
+# DEPRECATED: This file has been refactored into game/border/worldborder_shrink.mcfunction
+# Keeping for backwards compatibility - redirects to new location
+function battle_royale:game/border/worldborder_shrink with storage br:temp

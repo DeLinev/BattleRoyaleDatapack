@@ -1,3 +1,5 @@
-$execute in minecraft:overworld run worldborder set $(border_min) 0
-$execute in minecraft:the_nether run worldborder set $(border_min) 0
-$execute in minecraft:the_end run worldborder set $(border_min) 0
+# DEPRECATED: This file has been refactored into game/border/worldborder_set.mcfunction
+# Keeping for backwards compatibility - redirects to new location
+# Note: Old function expected 'border_min' macro, new function expects 'size'
+execute store result storage br:temp size int 1 run data get storage br:temp border_min
+function battle_royale:game/border/worldborder_set with storage br:temp

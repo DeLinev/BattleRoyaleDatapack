@@ -5,4 +5,4 @@ execute as @a[scores={br.deaths=1..,br.player_state=0..}] run function battle_ro
 
 # Check win condition every second
 execute if score #ticks br.tick matches 0 run function battle_royale:game/check_win
-execute if score #ticks br.tick matches 0 run function battle_royale:game/border_second
+execute if score #ticks br.tick matches 0 run function battle_royale:game/border/tick

@@ -38,7 +38,7 @@ scoreboard players set #team_yellow br.temp 0
 
 # Reset world border
 execute store result storage br:temp size int 1 run scoreboard players get #border_initial br.config
-function battle_royale:game/set_initial_border with storage br:temp
+function battle_royale:game/border/init with storage br:temp
 
 bossbar set br:border visible false
 bossbar set br:border value 100

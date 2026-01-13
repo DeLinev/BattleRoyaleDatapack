@@ -41,15 +41,6 @@ summon marker -3 201 -2 {Tags:["br.anchor_block"]}
 
 # Teams
 function battle_royale:teams/remove_all_teams
-# team add br.red "Red Team"
-# team modify br.red color red
-# team modify br.red friendlyFire false
-# team modify br.red seeFriendlyInvisibles true
-
-# team add br.blue "Blue Team"
-# team modify br.blue color blue
-# team modify br.blue friendlyFire false
-# team modify br.blue seeFriendlyInvisibles true
 
 team add br.green "Green Team"
 team modify br.green color green
@@ -60,10 +51,6 @@ team add br.yellow "Yellow Team"
 team modify br.yellow color yellow
 team modify br.yellow friendlyFire false
 team modify br.yellow seeFriendlyInvisibles true
-
-team add br.spectators "Spectators"
-team modify br.spectators color gray
-team modify br.spectators collisionRule never
 
 # Bossbar
 bossbar add br:border {"text":"⚠ The area will soon begin to shrink... ⚠", color: "dark_purple"}

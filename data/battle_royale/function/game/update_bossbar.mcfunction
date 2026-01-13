@@ -1,5 +1,3 @@
-execute store result score #remaining_time br.temp run data get storage br:temp remaining_time
-scoreboard players operation #remaining_time br.temp *= #100 br.const
-execute store result score #all_time br.temp run data get storage br:temp all_time
-scoreboard players operation #remaining_time br.temp /= #all_time br.temp
-execute store result bossbar br:border value run scoreboard players get #remaining_time br.temp
+# DEPRECATED: This file has been refactored into game/border/update_bossbar.mcfunction
+# Keeping for backwards compatibility - redirects to new location
+function battle_royale:game/border/update_bossbar with storage br:temp
