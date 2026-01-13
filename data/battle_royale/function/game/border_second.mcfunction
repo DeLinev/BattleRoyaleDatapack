@@ -25,9 +25,11 @@ execute if score #border_curr br.temp > #border_min br.config if score #border_t
 execute if score #border_curr br.temp > #border_min br.config if score #border_timer br.timer matches 1.. run function battle_royale:game/update_bossbar with storage br:temp
 execute if score #border_curr br.temp > #border_min br.config if score #border_timer br.timer matches 1.. if score #temp br.temp > #shrink_step br.config run execute store result storage br:temp step int 1 run scoreboard players get #shrink_step br.config
 execute if score #border_curr br.temp > #border_min br.config if score #border_timer br.timer matches 1.. if score #temp br.temp > #shrink_step br.config run function battle_royale:game/shrink_border with storage br:temp
-execute if score #border_curr br.temp > #border_min br.config if score #border_timer br.timer matches 1.. unless score #temp br.temp > #shrink_step br.config in minecraft:overworld run worldborder set 50 0
-execute if score #border_curr br.temp > #border_min br.config if score #border_timer br.timer matches 1.. unless score #temp br.temp > #shrink_step br.config in minecraft:the_nether run worldborder set 50 0
-execute if score #border_curr br.temp > #border_min br.config if score #border_timer br.timer matches 1.. unless score #temp br.temp > #shrink_step br.config in minecraft:the_end run worldborder set 50 0
+execute if score #border_curr br.temp > #border_min br.config if score #border_timer br.timer matches 1.. run execute store result storage br:temp border_min int 1 run scoreboard players get #border_min br.config
+execute if score #border_curr br.temp > #border_min br.config if score #border_timer br.timer matches 1.. unless score #temp br.temp > #shrink_step br.config run function battle_royale:game/set_min_border with storage br:temp
+# execute if score #border_curr br.temp > #border_min br.config if score #border_timer br.timer matches 1.. unless score #temp br.temp > #shrink_step br.config in minecraft:overworld run worldborder set 50 0
+# execute if score #border_curr br.temp > #border_min br.config if score #border_timer br.timer matches 1.. unless score #temp br.temp > #shrink_step br.config in minecraft:the_nether run worldborder set 50 0
+# execute if score #border_curr br.temp > #border_min br.config if score #border_timer br.timer matches 1.. unless score #temp br.temp > #shrink_step br.config in minecraft:the_end run worldborder set 50 0
 
 # When the shrinking timer ends and the border is still above minimum, start the next waiting phase
 execute if score #border_curr br.temp > #border_min br.config if score #border_timer br.timer matches 0 if score #wait_timer br.timer matches ..0 run scoreboard players operation #wait_timer br.timer = #wait_time br.config

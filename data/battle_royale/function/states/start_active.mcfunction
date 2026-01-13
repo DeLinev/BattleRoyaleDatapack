@@ -14,11 +14,11 @@ effect give @a regeneration 1 255 true
 effect give @a saturation 1 255 true
 clear @a
 
-# Spread teams across the map (max_range = border_initial / 2, spread_dist = 50)
+# Spread teams across the map (max_range = border_initial / 2, spread_dist = 100)
 scoreboard players operation #temp br.temp = #border_initial br.config
 scoreboard players operation #temp br.temp /= #2 br.const
 execute store result storage br:temp max_range int 1 run scoreboard players get #temp br.temp
-data modify storage br:temp spread_dist set value 50
+data modify storage br:temp spread_dist set value 100
 function battle_royale:game/spread_players with storage br:temp
 
 bossbar set br:border visible true

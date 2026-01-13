@@ -30,12 +30,12 @@ scoreboard players set #-1 br.const -1
 
 # Config values
 scoreboard players set #border_initial br.config 3000
-scoreboard players set #border_min br.config 50
-scoreboard players set #shrink_time br.config 60
-scoreboard players set #wait_time br.config 10
+scoreboard players set #border_min br.config 100
+scoreboard players set #shrink_time br.config 120
+scoreboard players set #wait_time br.config 300
 scoreboard players set #shrink_step br.config 6
 scoreboard players set #countdown_time br.config 10
-scoreboard players set #ending_time br.config 20
+scoreboard players set #ending_time br.config 30
 scoreboard players set #min_players br.config 2
 summon marker -3 201 -2 {Tags:["br.anchor_block"]}
 
