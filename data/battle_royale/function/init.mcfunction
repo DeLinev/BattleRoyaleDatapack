@@ -25,6 +25,7 @@ scoreboard players reset * br.team
 scoreboard players reset * br.player_state
 
 team leave @a
+advancement revoke @a everything
 clear @a[tag=!br.admin]
 spawnpoint @a 0 200 0
 effect give @a regeneration 1 255 true
