@@ -2,8 +2,8 @@
 scoreboard players set #state br.gamestate 0
 
 # Load lobby structure
-forceload add -4 -6 8 6
-place template battle_royale:lobby_base -4 200 -6
+forceload add -17 -17 15 16
+place template battle_royale:lobby_base_v2 -17 200 -17
 kill @e[type=item]
 
 scoreboard players set #ticks br.tick 0
