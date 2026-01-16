@@ -56,5 +56,5 @@ tag @a remove br.dead
 tag @a remove br.winner
 tag @a remove br.has_team
 
-tellraw @a [{"text":"[","color":"gray"},{"text":"Battle Royale","color":"gold","bold":true},{"text":"] ","color":"gray"},{"text":"Game reset! Returned to lobby.","color":"aqua"}]
+tellraw @a [{"text":"[","color":"gray"},{"text":"Battle Royale","color":"gold","bold":true},{"text":"] ","color":"gray"},{"text":"All scoreboards values were reset.","color":"aqua"}]
 playsound minecraft:block.note_block.chime master @a ~ ~ ~ 1 1.5

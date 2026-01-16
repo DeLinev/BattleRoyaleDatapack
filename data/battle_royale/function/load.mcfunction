@@ -1,4 +1,11 @@
-tellraw @a [{"text":"[","color":"gray"},{"text":"Battle Royale","color":"gold","bold":true},{"text":"] ","color":"gray"},{"text":"Datapack loaded! Version 1.0","color":"green"}]
+tellraw @a [{"text":"[","color":"gray"},{"text":"Battle Royale","color":"gold","bold":true},{"text":"] ","color":"gray"},{"text":"Datapack loaded!","color":"green"}]
+tellraw @a[tag=!br.admin] [\
+{"text":"[","color":"gray"},\
+{"text":"Battle Royale","color":"gold","bold":true},\
+{"text":"] ","color":"gray"},\
+{"text":"If you are the world owner, run ","color":"yellow"},\
+{"text":"/tag @s add br.admin","color":"aqua","click_event": {"action":"suggest_command","command":"/tag @s add br.admin"}},\
+{"text":" to access admin settings.","color":"yellow"}]
 
 # Scoreboards - Core System
 # br.gamestate: 0=Lobby, 1=Starting, 2=Active, 3=Ending
@@ -10,6 +17,7 @@ scoreboard objectives add br.config dummy "Config"
 scoreboard objectives add br.temp dummy "Temp"
 scoreboard objectives add br.const dummy "Constants"
 scoreboard objectives add br.players_count dummy "Players"
+scoreboard objectives add br.joined custom:minecraft.leave_game
 
 gamerule locator_bar false
 
@@ -55,4 +63,4 @@ bossbar set br:border visible false
 
 function battle_royale:init
 
-tellraw @a[tag=br.admin] [{"text":"[","color":"gray"},{"text":"BR Debug","color":"aqua"},{"text":"] ","color":"gray"},{"text":"All scoreboards initialized.","color":"white"}]
+execute as @a[tag=br.admin] run function battle_royale:config/show
