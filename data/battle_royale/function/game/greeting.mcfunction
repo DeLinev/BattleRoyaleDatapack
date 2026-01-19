@@ -1,3 +1,5 @@
+spawnpoint @s 0 201 0
+
 # Mark player as joined to prevent repeat
 scoreboard players set @s br.joined 1
 
@@ -32,14 +34,6 @@ tellraw @s {"text":"","extra":[\
   {"text":"  3. ","color":"gray"},\
   {"text":"Survive and be the last one standing!","color":"white"}\
 ]}
-tellraw @s ""
-execute if entity @s[tag=br.admin] run \
-tellraw @s {"text":"","extra":[\
-  {"text":"» ","color":"yellow"},\
-  {"text":"Admin Note: ","color":"red","bold":true},\
-  {"text":"Use this command to start the game: ","color":"white"},\
-  {"text":"/function battle_royale:admin/start_game","color":"aqua","click_event": {"action":"suggest_command","command":"/function battle_royale:admin/start_game"}}\
-]} 
 tellraw @s ""
 tellraw @s {"text":"","extra":[\
   {"text":"» ","color":"yellow"},\

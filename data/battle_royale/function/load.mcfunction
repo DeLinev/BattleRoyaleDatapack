@@ -6,6 +6,14 @@ tellraw @a[tag=!br.admin] [\
 {"text":"If you are the world owner, run ","color":"yellow"},\
 {"text":"/tag @s add br.admin","color":"aqua","click_event": {"action":"suggest_command","command":"/tag @s add br.admin"}},\
 {"text":" to access admin settings.","color":"yellow"}]
+tellraw @a[tag=br.admin] ""
+tellraw @a[tag=br.admin] {"text":"","extra":[\
+  {"text":"» ","color":"yellow"},\
+  {"text":"Admin Note: ","color":"red","bold":true},\
+  {"text":"Use this command to start the game: ","color":"white"},\
+  {"text":"/function battle_royale:admin/start_game","color":"aqua","click_event": {"action":"suggest_command","command":"/function battle_royale:admin/start_game"}}\
+]} 
+tellraw @a[tag=br.admin] ""
 
 # Scoreboards - Core System
 # br.gamestate: 0=Lobby, 1=Starting, 2=Active, 3=Ending
