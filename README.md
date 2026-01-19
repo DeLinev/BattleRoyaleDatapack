@@ -1,6 +1,6 @@
 # ⚔️ Battle Royale Datapack
 
-A Minecraft Java Edition datapack that adds a fully-featured Battle Royale game mode.
+A Minecraft Java Edition datapack that adds a Battle Royale game mode.
 
 ## Features
 
@@ -36,7 +36,7 @@ A Minecraft Java Edition datapack that adds a fully-featured Battle Royale game 
 
 ### Force End a Game
 ```
-/function battle_royale:admin/force_end
+/function battle_royale:admin/return_to_lobby
 ```
 
 ## Configuration Options
